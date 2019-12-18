@@ -1,0 +1,64 @@
+doctype html
+head
+  title Homesfy Search
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='icon', type='image/png', sizes='32x32', href='https://homesfy.in/images/favicon-32x32.png')
+  link(rel='stylesheet', href='../css/bootstrap.min.css')
+  link(rel='stylesheet', href='../css/all.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  link(rel='stylesheet' href='../css/main.css')
+  // -Google fonts links
+  link(href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&display=swap', rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap', rel='stylesheet')
+header(role='banner')
+  nav.navbar.mb-3.mt-5
+    .container
+      .row.main_header
+        .site_img_header.col-md-3
+          img.site_img(src='HomesfyLogo.jpg', alt='site-image')
+        .input-group.col-md-6.mb-4.d-flex.justify-content-center
+          input.form-control.prop_name(type='text', placeholder="Search by Project Name, City or Area Keywords", aria-label="Recipient's username", aria-describedby='basic-addon2')
+          input.form-control.name_hide(type='hidden')
+          .input-group-append
+            button.input-group.prop_search.btn.text-white search
+          span#searchsuggestion    
+
+section
+  .container
+    .row
+      .col-md-3
+        .filter_section
+          h4 Filter
+          hr
+          span BHK
+          .bhk-count
+            ul.list-unstyled.row.filter_ul
+              li.card.filter_bhk.p-2.m-2.col-sm-3="1BHK"
+              li.card.filter_bhk.p-2.m-2.col-sm-3="2BHK"
+              li.card.filter_bhk.p-2.m-2.col-sm-3="3BHK"
+              li.card.filter_bhk.p-2.m-2.col-sm-3="4BHK"
+        hr
+        span PRICE RANGE
+        .Price-range.row
+          select.custom-select.col-sm-5.ml-2
+            option(selected='') Min
+            option(value='1') One
+            option(value='2') Two
+            option(value='3') Three
+
+          select.custom-select.col-sm-5.ml-2
+            option(selected='') Max
+            option(value='1') One
+            option(value='2') Two
+            option(value='3') Three
+
+      .col-md-9
+        .main_area_display1
+          .main_area_display.card.pl-4.pr-4
+          
+  .loader.d-none     
+script(src='js/bootstrap.min.js')
+script(src='js/all.js')
+script(src='custom.js')
+script(src='search.js')
